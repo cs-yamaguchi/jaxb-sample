@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="Shift_JIS" standalone="yes"?>
+
+<items name="item-list"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="item.xsd">
+
+  <book>
+    <isbn>978-5487654968</isbn>
+    <title>XML Tutorial</title>
+    <price>32.99</price>
+    <publisher>
+      <edition>3</edition>
+      <date>17 October 2006</date>
+    </publisher>
+  </book>
+  <book>
+    <isbn>978-5487653226</isbn>
+    <title>PHP Tutorial</title>
+    <price>26.39</price>
+    <publisher>
+      <edition>2</edition>
+      <date>28 April 2006</date>
+    </publisher>
+  </book>
+</items>

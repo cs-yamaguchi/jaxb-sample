@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 属性defaultの値にtargetタグの属性nameの値を指定することでtargetタグ内の内容を実行 -->
+<project name="project" default="default" basedir=".">
+	<description>
+		antによるDTDファイルの変換
+	</description>
+
+	<!-- 属性classnameで指定したクラスを属性nameの値で指定し実行できるようになる -->
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+		<classpath>
+			<!-- 読み込むクラスの場所を指定 -->
+			<fileset dir="." includes="lib/*.jar"/>
+		</classpath>
+	</taskdef>
+
+	<!-- projectの属性defaultで指定されているものだけが実行される -->
+	<target name="default">
+		<!-- 各種設定 -->
+		<!-- 属性schema ⇒ 実行するファイルの指定 -->
+		<!-- 属性destdir ⇒ 作成されるクラスの場所 -->
+		<!-- 属性package ⇒ 作成されるクラスのパッケージ名 -->
+		<xjc schema="xml-schema/sample.xsd" destdir="src" package="jp.co.netcitys.jaxb.sample.generate">
+			<!--<arg value="-dtd"/>-->
+		</xjc>
+	</target>
+
+</project>
